@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.env
+.venv
+env/
+venv/
+*.csv
+!labels.csv
+!sample_submission.csv
+train/
+test/
