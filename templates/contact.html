@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section" style="background: #f8fafc; color: #0f172a;">
+    <!-- Overriding bg for contact section as per screenshot white card? No, screenshot shows white card ON dark bg possibly, or full white. I'll make the section dark but contain a white card. -->
+    <div style="margin-top: 80px;">
+        <h2 class="section-title" style="color: #0f172a;">Contact Us:-</h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 style="margin-bottom: 20px; font-size: 2rem;">CONTACT US</h3>
+
+                <div class="info-item">
+                    <div style="display: flex; gap: 15px; align-items: start;">
+                        <div style="background: var(--accent-color); padding: 10px; border-radius: 5px; color: white;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location:</h4>
+                            <p>Survey no. 91, Sundarayya Vignana Kendram, Technical Block, 6th floor, Madhava Reddy
+                                Colony, Gachibowli, Hyderabad, Telangana 500032</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div style="background: var(--accent-color); padding: 10px; border-radius: 5px; color: white;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email:</h4>
+                            <p>info@thesmartbridge.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div style="background: var(--accent-color); padding: 10px; border-radius: 5px; color: white;">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Call:</h4>
+                            <p>+91 6304320044</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                </div>
+                <input type="text" placeholder="Subject">
+                <textarea rows="5" placeholder="Message"></textarea>
+                <button class="btn-send">Send Message</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

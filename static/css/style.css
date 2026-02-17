@@ -1,0 +1,333 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --primary-color: #f97316; /* Orange-ish from screenshot */
+    --secondary-color: #334155;
+    --accent-color: #eab308;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header/Nav */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary-color);
+}
+
+.btn-inspect {
+    border: 1px solid var(--accent-color);
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.btn-inspect:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* Hero Section (Index) */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.circle-graphic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--glass-border);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Add intricate dots/lines here via background image or more divs implies usually, simplifying for CSS */
+    background: radial-gradient(transparent 60%, var(--glass-bg));
+}
+
+.btn-main {
+    padding: 15px 40px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(249, 115, 22, 0.6);
+}
+
+/* Sections General */
+.section {
+    padding: 100px 50px;
+    min-height: 100vh;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 20px;
+}
+
+/* About Page */
+.about-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+}
+
+.dog-thumb {
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.dog-thumb:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.about-steps {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step-item {
+    display: flex;
+    gap: 20px;
+}
+
+.step-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.step-content h3 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Contact Page */
+.contact-container {
+    display: flex;
+    gap: 50px;
+    background: #fff;
+    color: #000;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item h4 {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.info-item p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    background: #f8fafc;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.btn-send {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Predict & Output Page */
+.upload-box {
+    background: var(--glass-bg);
+    border: 2px dashed var(--glass-border);
+    padding: 50px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.upload-box:hover {
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.result-card {
+    text-align: center;
+}
+
+.result-img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    border: 5px solid var(--primary-color);
+}
+
+.prediction-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.prediction-text span {
+    color: var(--primary-color);
+}

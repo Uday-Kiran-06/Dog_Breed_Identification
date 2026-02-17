@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section" style="display: flex; justify-content: center; align-items: center;">
+    <div class="result-card">
+        {% if image_file %}
+        <img src="{{ url_for('uploaded_file', filename=image_file) }}" alt="Uploaded Image" class="result-img">
+        {% endif %}
+
+        <h1 class="prediction-text">
+            The Dog Breed is <span>{{ prediction }}</span>.
+        </h1>
+
+        <a href="{{ url_for('predict') }}" class="btn-main" style="margin-top: 30px; display: inline-block;">Try
+            Another</a>
+    </div>
+</section>
+{% endblock %}

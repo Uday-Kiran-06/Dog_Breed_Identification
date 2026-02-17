@@ -1,0 +1,19 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+venv_new/
+env/
+
+# Dataset and Large Files
+Dataset/
+*.h5
+uploads/
+
+# OS specific
+.DS_Store
+Thumbs.db

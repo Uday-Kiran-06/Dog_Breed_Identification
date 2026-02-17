@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section" style="display: flex; justify-content: center; align-items: center;">
+    <div>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Identify Dog Breed</h2>
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="upload-box" style="display: block;">
+                <i class="fas fa-cloud-upload-alt"
+                    style="font-size: 3rem; margin-bottom: 20px; color: var(--primary-color);"></i>
+                <h3>Click to Upload Image</h3>
+                <p style="color: #94a3b8;">Supported formats: JPG, PNG, JPEG</p>
+            </label>
+            <input id="file-upload" type="file" name="file" style="display: none;" onchange="this.form.submit()">
+        </form>
+
+        {% if error %}
+        <div style="color: red; text-align: center; margin-top: 20px;">
+            {{ error }}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
