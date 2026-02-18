@@ -5,7 +5,7 @@ This is a Flask-based web application that predicts the breed of a dog from an i
 ![Home Page](assets/Home.png)
 
 ## Demo
-**Project Demo:**https://drive.google.com/drive/folders/1lV609Zr0z2Xnj5H-aJGZNY78PsmQWGjP?usp=sharing
+**Project Demo:** https://drive.google.com/drive/folders/1lV609Zr0z2Xnj5H-aJGZNY78PsmQWGjP?usp=sharing
 
 ## Features
 
