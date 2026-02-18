@@ -4,6 +4,9 @@ This is a Flask-based web application that predicts the breed of a dog from an i
 
 ![Home Page](assets/Home.png)
 
+## Demo
+**Project Demo:**https://drive.google.com/drive/folders/1lV609Zr0z2Xnj5H-aJGZNY78PsmQWGjP?usp=sharing
+
 ## Features
 
 - **Upload Image:** Users can upload an image of a dog.
@@ -92,6 +95,3 @@ DOG_BREED_PREDICTION/
 - **Class Indices:** Ensure `class_indices.json` is present for accurate label mapping.
 - **Upload Folder:** The `uploads` folder is automatically created if it doesn't exist.
 
-## License
-
-[MIT License](LICENSE)
